@@ -13,9 +13,11 @@ on:
         - SFT1200
       email:
         description: 'Git accuont email address'  
+        default: "496814664@qq.com"
         required: false
       gituser:
         description: 'Git user name'  
+        default: "Road-tech"
         required: false
         
 jobs:
