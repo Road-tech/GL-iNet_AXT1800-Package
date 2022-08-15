@@ -1,3 +1,5 @@
+name: Build package
+
 on: 
   workflow_dispatch:
     inputs:
