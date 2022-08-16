@@ -55,6 +55,7 @@ cat feeds.conf.default
 echo CONFIG_ALL=y >.config
 make defconfig
 make V=s ./package/feeds/NueXini_Packages/luci-app-openclash/compile
+make V=s ./package/feeds/NueXini_Packages/luci-app-ddnsto/compile
 
 # sed -i 's/# CONFIG_ALL .*/CONFIG_ALL=y/' .config
 # make defconfig
