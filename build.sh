@@ -51,9 +51,14 @@ cat feeds.conf.default
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
-sed -i 's/# CONFIG_ALL .*/CONFIG_ALL=y/' .config
+
+echo CONFIG_ALL=y >.config
 make defconfig
-make package/compile -i -j V=99
+make V=s ./package/feeds/NueXini_Packages/luci-app-openclash/compile
+
+# sed -i 's/# CONFIG_ALL .*/CONFIG_ALL=y/' .config
+# make defconfig
+# make package/compile -i -j V=99
 
 find bin -type f -exec ls -lh {} \;
 find bin -type f -name "*.ipk" -exec cp -f {} "${WORKDIR}" \; 
