@@ -18,11 +18,9 @@ env:
   REPO_URL: https://github.com/gl-inet/gl-infra-builder.git
   REPO_BRANCH: main
   CONFIG_FILE: Road-axt1800.yml
-  WIFI_CONFIG_FILE: mac80211.sh
   GIT_USER: Road-tech
   GIT_EMAIL: 496814664@qq.com
   DIY_P1_SH: add-feeds.sh
-  DIY_P2_SH: load-config.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -75,17 +73,8 @@ jobs:
     - name: Download feeds and Generate config file/拉取订阅文件并生成config文件
       id: package
       run: |
-        rm $GITHUB_WORKSPACE/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211/files/lib/wifi/mac80211.sh
-        [ -e $WIFI_CONFIG_FILE ] && mv -f $WIFI_CONFIG_FILE $GITHUB_WORKSPACE/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211/files/lib/wifi/mac80211.sh
-        chmod +x $DIY_P2_SH
         cd gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py target_wlan_ap-gl-axt1800-5-4 luci Road
-        $GITHUB_WORKSPACE/$DIY_P2_SH
-        
-    - name: 添加glinet私有软件包（官方UI）
-      run: |
-        cd gl-infra-builder
-        git clone https://github.com/gl-inet/glinet4.x.git glinetUI
 
     - name: Compile the firmware/编译
       id: compile
@@ -99,6 +88,12 @@ jobs:
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
         mkdir ipk
         mv bin/targets/ipq807x/ipq60xx/packages ipk
+        
+    - name: 生成软件包索引
+      id: generateipk
+      run: |
+        git clone https://github.com/luochongjun/opkg-make-repo.git
+        cd opkg-make-repo && ./make-index /home/runner/work/GL-iNet_AXT1800-Package/GL-iNet_AXT1800-Package/gl-infra-builder/wlan-ap/openwrt/ipk
 
     - name: Check space usage
       if: (!cancelled())
