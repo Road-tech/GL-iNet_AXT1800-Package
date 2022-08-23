@@ -1,0 +1,1114 @@
+Package: ath11k-wifi-gl-ax1800
+Version: 1
+Depends: libc
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/ath11k-wifi
+SourceName: ath11k-wifi-gl-ax1800
+Section: firmware
+SourceDateEpoch: 1652766332
+Architecture: arm_cortex-a7
+Installed-Size: 56501
+Filename: ath11k-wifi-gl-ax1800_1_arm_cortex-a7.ipk
+Size: 54760
+SHA256sum: f652dd8fd344a7bed273a8403eeeeadcb6279e5e3a4fdd645f3d30d657a41243
+Description:  gl-ax1800 bdf
+
+Package: base-files
+Version: 1451-r16399+142-c67509efd7
+Depends: libc, netifd, jsonfilter, usign, openwrt-keyring, ubi-utils, fstools, fwtool
+Source: package/base-files
+SourceName: base-files
+License: GPL-2.0
+Section: base
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 472070
+Filename: base-files_1451-r16399+142-c67509efd7_arm_cortex-a7.ipk
+Size: 472737
+SHA256sum: 204e162d0c7ac9a5d00a6e7f02d3521d94f4651cd1145bd0f8bc561c04a2fa2b
+Description:  This package contains a base filesystem and system scripts for OpenWrt.
+
+Package: dropbear
+Version: 2020.81-2
+Depends: libc
+Alternatives: 100:/usr/bin/scp:/usr/sbin/dropbear, 100:/usr/bin/ssh:/usr/sbin/dropbear
+Source: package/network/services/dropbear
+SourceName: dropbear
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
+Section: net
+SourceDateEpoch: 1607690904
+CPE-ID: cpe:/a:matt_johnston:dropbear_ssh_server
+Architecture: arm_cortex-a7
+Installed-Size: 98481
+Filename: dropbear_2020.81-2_arm_cortex-a7.ipk
+Size: 99335
+SHA256sum: bd75bb449e8c7eee68018b68881d723a1596ddde031b8f4ad996cf003a15c762
+Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: fstools
+Version: 2021-07-28-cc63933f-1
+Depends: libc, ubox, ubi-utils
+Source: package/system/fstools
+SourceName: fstools
+License: GPL-2.0
+Section: base
+SourceDateEpoch: 1661235891
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: arm_cortex-a7
+Installed-Size: 16404
+Filename: fstools_2021-07-28-cc63933f-1_arm_cortex-a7.ipk
+Size: 17174
+SHA256sum: fc286f6dd315f68b94f9f625d764d82834886af6a77dc4332e88a22ac021773d
+Description:  OpenWrt filesystem tools
+
+Package: fwtool
+Version: 2019-11-12-8f7fe925-1
+Depends: libc
+Source: package/system/fwtool
+SourceName: fwtool
+License: GPL-2.0
+Section: utils
+SourceDateEpoch: 1573768411
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 3801
+Filename: fwtool_2019-11-12-8f7fe925-1_arm_cortex-a7.ipk
+Size: 4560
+SHA256sum: cf97f740a7683bfdb9575063266b1f02e611fa6d3e0089db51bf0707ec05c949
+Description:  Utility for appending and extracting firmware metadata and signatures
+
+Package: ip6tables
+Version: 1.8.7-1
+Depends: libc, kmod-ip6tables, iptables
+Source: package/network/utils/iptables
+SourceName: ip6tables
+License: GPL-2.0
+Section: net
+SourceDateEpoch: 1613474876
+CPE-ID: cpe:/a:netfilter_core_team:iptables
+Architecture: arm_cortex-a7
+Installed-Size: 218
+Filename: ip6tables_1.8.7-1_arm_cortex-a7.ipk
+Size: 970
+SHA256sum: aefbce9a9305558f19748235052242c01e6505becb7e400c91cd1e1613fc8f66
+Description:  IPv6 firewall administration tool
+
+Package: iptables
+Version: 1.8.7-1
+Depends: libc, kmod-ipt-core, libip4tc2, libip6tc2, libxtables12
+Source: package/network/utils/iptables
+SourceName: iptables
+License: GPL-2.0
+Section: net
+SourceDateEpoch: 1613474876
+CPE-ID: cpe:/a:netfilter_core_team:iptables
+Architecture: arm_cortex-a7
+Installed-Size: 24642
+Filename: iptables_1.8.7-1_arm_cortex-a7.ipk
+Size: 25453
+SHA256sum: 08229dd49f12d4e1d81521a16328422ad09a7be64a93ecfee665496fd1a29a8f
+Description:  IP firewall administration tool.
+ 
+ Matches:
+ - icmp
+ - tcp
+ - udp
+ - comment
+ - conntrack
+ - limit
+ - mac
+ - mark
+ - multiport
+ - set
+ - state
+ - time
+ 
+ Targets:
+ - ACCEPT
+ - CT
+ - DNAT
+ - DROP
+ - REJECT
+ - FLOWOFFLOAD
+ - LOG
+ - MARK
+ - MASQUERADE
+ - REDIRECT
+ - SET
+ - SNAT
+ - TCPMSS
+ 
+ Tables:
+ - filter
+ - mangle
+ - nat
+ - raw
+ 
+
+Package: iwinfo
+Version: 2021-06-09-c0414642-2.1
+Depends: libc, libiwinfo20210430
+Source: package/network/utils/iwinfo
+SourceName: iwinfo
+License: GPL-2.0
+Section: utils
+SourceDateEpoch: 1661235892
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a7
+Installed-Size: 7178
+Filename: iwinfo_2021-06-09-c0414642-2.1_arm_cortex-a7.ipk
+Size: 8001
+SHA256sum: 73579ca89200fb86df72733559522b1611fb40a5abe4340198183c391b93668c
+Description:  Command line frontend for the wireless information library.
+
+Package: kmod-ath11k-ahb
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ath11k, kmod-ath11k-pci
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-ath11k-ahb
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 8864
+Filename: kmod-ath11k-ahb_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 9741
+SHA256sum: e16026f2a037d16c1b10ba14afe631b7cc2fdc41ee3de730c9ef0e994b2f4577
+Description:  Atheros 802.11ax wireless cards support - AHB
+
+Package: kmod-ath11k-pci
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ath11k
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-ath11k-pci
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 15478
+Filename: kmod-ath11k-pci_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 16218
+SHA256sum: 9aa390ba476593064378476f3b44cb5e87deb2c801547bc23945b31f226dbb58
+Description:  Atheros 802.11ax wireless cards support - PCI
+
+Package: kmod-ath11k
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ath, kmod-qca-nss-drv, kmod-hwmon-core
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-ath11k
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 320996
+Filename: kmod-ath11k_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 317248
+SHA256sum: 26704187a17f96695fd2ef04853904bdaae98e8d707590d4d1c95165233a2245
+Description:  This module adds support for wireless adapters based on
+ Atheros IEEE 802.11ax family of chipsets.
+
+Package: kmod-ath
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-mac80211
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-ath
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 12232
+Filename: kmod-ath_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 12946
+SHA256sum: 7cae34c68a6188cd435154ab81d35fcbcd5ecd24b091f644dea23b9d6c9ae60a
+Description:  This module contains some common parts needed by Atheros Wireless drivers.
+
+Package: kmod-bonding
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-bonding
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 63113
+Filename: kmod-bonding_5.4.164-1_arm_cortex-a7.ipk
+Size: 63586
+SHA256sum: 6d2fbc4a303cabdd98f3d5ebc6c2f638e299d09a58de59042bdac217e4c6a436
+Description:  Kernel module for NIC bonding.
+
+Package: kmod-cfg80211
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), iw
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-cfg80211
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 175263
+Filename: kmod-cfg80211_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 175181
+SHA256sum: 055693aadbf3b7204d41a2c3311349dfb233e670645dce8d8dfa215190d6f0a3
+Description:  cfg80211 is the Linux wireless LAN (802.11) configuration API.
+
+Package: kmod-diag-char
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-lib-crc-ccitt, kmod-usb-f-diag
+Source: package/kernel/linux
+SourceName: kmod-diag-char
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 112676
+Filename: kmod-diag-char_5.4.164-1_arm_cortex-a7.ipk
+Size: 112668
+SHA256sum: f3ad9018ddb992e928e3092d904d96d65293f4bba7603a1c59110ea4eecb9b70
+Description:  CHAR DIAG
+
+Package: kmod-fs-configfs
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-fs-configfs
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 191
+Filename: kmod-fs-configfs_5.4.164-1_arm_cortex-a7.ipk
+Size: 938
+SHA256sum: 1f269c29080f15f6c03749452cc686cdadc2e3bb4c726a77cb26cfe90bbe2c01
+Description:  Kernel module for configfs support
+
+Package: kmod-gpio-button-hotplug
+Version: 5.4.164-3
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/gpio-button-hotplug
+SourceName: kmod-gpio-button-hotplug
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235896
+Architecture: arm_cortex-a7
+Installed-Size: 6283
+Filename: kmod-gpio-button-hotplug_5.4.164-3_arm_cortex-a7.ipk
+Size: 7222
+SHA256sum: fd0610425484dcfa0caf61963622ef968317a9191aaab9d6c403f1a9b852a9f4
+Description:  This is a replacement for the following in-kernel drivers:
+ 1) gpio_keys (KEYBOARD_GPIO)
+ 2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
+ 
+ Instead of generating input events (like in-kernel drivers do) it generates
+ uevent-s and broadcasts them. This allows disabling input subsystem which is
+ an overkill for OpenWrt simple needs.
+
+Package: kmod-hwmon-core
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-hwmon-core
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 5659
+Filename: kmod-hwmon-core_5.4.164-1_arm_cortex-a7.ipk
+Size: 6394
+SHA256sum: 144dd681a126e95aa2b9cf1f0c50f5d5540d84a195cb654d43e1b2ab7d3086ef
+Description:  Kernel modules for hardware monitoring
+
+Package: kmod-hwmon-pwmfan
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-hwmon-core
+Source: package/kernel/linux
+SourceName: kmod-hwmon-pwmfan
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 4629
+Filename: kmod-hwmon-pwmfan_5.4.164-1_arm_cortex-a7.ipk
+Size: 5395
+SHA256sum: 5c3f614c7ea5482f4bca93efef3d4ccaf6eeee15bfa0eac7537b9e6052c6003b
+Description:  Kernel module for PWM controlled FANs
+
+Package: kmod-ip6tables
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-reject6, kmod-nf-ipt6, kmod-ipt-core
+Source: package/kernel/linux
+SourceName: kmod-ip6tables
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 7850
+Filename: kmod-ip6tables_5.4.164-1_arm_cortex-a7.ipk
+Size: 8646
+SHA256sum: b21f46776a79b89055c7e9de413a0e612d28d66652cc39ab9c89ed454922008c
+Description:  Netfilter IPv6 firewalling support
+
+Package: kmod-ipt-conntrack
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ipt-core, kmod-nf-conntrack
+Source: package/kernel/linux
+SourceName: kmod-ipt-conntrack
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 3142
+Filename: kmod-ipt-conntrack_5.4.164-1_arm_cortex-a7.ipk
+Size: 3963
+SHA256sum: 26fd74bb71a29edd88975bee25ce0c5efe22feb4400aae287fee486d239d42d9
+Description:  Netfilter (IPv4) kernel modules for connection tracking
+ Includes:
+ - conntrack
+ - defrag
+ - iptables_raw
+ - NOTRACK
+ - state
+
+Package: kmod-ipt-core
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-reject, kmod-nf-ipt
+Source: package/kernel/linux
+SourceName: kmod-ipt-core
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 19043
+Filename: kmod-ipt-core_5.4.164-1_arm_cortex-a7.ipk
+Size: 19839
+SHA256sum: f3dccfba35db060ef1d087822a0e7d10796c608106dae03dba7f429d1a1a25dd
+Description:  Netfilter core kernel modules
+ Includes:
+ - comment
+ - limit
+ - LOG
+ - mac
+ - multiport
+ - REJECT
+ - TCPMSS
+
+Package: kmod-ipt-nat
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ipt-core, kmod-nf-nat
+Source: package/kernel/linux
+SourceName: kmod-ipt-nat
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 4883
+Filename: kmod-ipt-nat_5.4.164-1_arm_cortex-a7.ipk
+Size: 5679
+SHA256sum: e1b1b152274ffbefd24f858027ae6ff56dd2471f4ad1f512893a1a7ac427729a
+Description:  Netfilter (IPv4) kernel modules for basic NAT targets
+ Includes:
+ - MASQUERADE
+
+Package: kmod-ipt-offload
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ipt-core, kmod-nf-flow
+Source: package/kernel/linux
+SourceName: kmod-ipt-offload
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 3525
+Filename: kmod-ipt-offload_5.4.164-1_arm_cortex-a7.ipk
+Size: 4285
+SHA256sum: 4513f401a96d3c7fad716edf1d2b93bb808bfaec009cedba7072ce93c409e2d5
+Description:  Netfilter routing/NAT offload support
+
+Package: kmod-lib-crc-ccitt
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-lib-crc-ccitt
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 2243
+Filename: kmod-lib-crc-ccitt_5.4.164-1_arm_cortex-a7.ipk
+Size: 3018
+SHA256sum: 9d65f1f671ff1586dc074144d9b48d16e2e705d47f3e31e28b48bd0f547b932d
+Description:  Kernel module for CRC-CCITT support
+
+Package: kmod-mac80211
+Version: 5.4.164+20210222_001-5.4.164-b157d2276-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-cfg80211, hostapd-common, kmod-qca-nss-drv, kmod-qca-nss-drv-wifi-meshmgr
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/wifi-ax/mac80211
+SourceName: kmod-mac80211
+Section: kernel
+SourceDateEpoch: 1661235896
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 321303
+Filename: kmod-mac80211_5.4.164+20210222_001-5.4.164-b157d2276-1_arm_cortex-a7.ipk
+Size: 318484
+SHA256sum: 82b71dff8a8586eb8fc48425f3c70f0e88da74776ae16b785c4fba008492d7cf
+Description:  Generic IEEE 802.11 Networking Stack (mac80211)
+
+Package: kmod-nf-conntrack6
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-conntrack
+Source: package/kernel/linux
+SourceName: kmod-nf-conntrack6
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 105
+Filename: kmod-nf-conntrack6_5.4.164-1_arm_cortex-a7.ipk
+Size: 846
+SHA256sum: 3aad45f366afa56c10c34264f7cfeb9aa0bf4dea17246f1e3746ab5471e7d554
+Description:  Netfilter IPv6 connection tracking
+
+Package: kmod-nf-conntrack
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-nf-conntrack
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 48298
+Filename: kmod-nf-conntrack_5.4.164-1_arm_cortex-a7.ipk
+Size: 48937
+SHA256sum: 4261408edfb3145ee4d1bcea149a71ade5862d1c08ca2d91d4dd0af5e72a5cc5
+Description:  Netfilter connection tracking
+
+Package: kmod-nf-flow
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-conntrack
+Source: package/kernel/linux
+SourceName: kmod-nf-flow
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 11631
+Filename: kmod-nf-flow_5.4.164-1_arm_cortex-a7.ipk
+Size: 12356
+SHA256sum: 7f87e702e7e4882359565187e136a7fbcaa19cc154c2af00e3fc191d258832a3
+Description:  Netfilter flowtable support
+
+Package: kmod-nf-ipt6
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-ipt
+Source: package/kernel/linux
+SourceName: kmod-nf-ipt6
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 8654
+Filename: kmod-nf-ipt6_5.4.164-1_arm_cortex-a7.ipk
+Size: 9415
+SHA256sum: 7c4c2d24fdf45e389fbcf1fcd630c33cf19464c0a313a3a0697bdf7649bdefd7
+Description:  Ip6tables core
+
+Package: kmod-nf-ipt
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-nf-ipt
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 18344
+Filename: kmod-nf-ipt_5.4.164-1_arm_cortex-a7.ipk
+Size: 19048
+SHA256sum: b963873e35d485fc19e2550b171cd3a34d969134af6791fffc8672aa16162321
+Description:  Iptables core
+
+Package: kmod-nf-nat
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nf-conntrack
+Source: package/kernel/linux
+SourceName: kmod-nf-nat
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 13287
+Filename: kmod-nf-nat_5.4.164-1_arm_cortex-a7.ipk
+Size: 14021
+SHA256sum: b3516c8d8ad7dcf6ab726eda3e0059446a8be4831f8ccdaae078382230151d9a
+Description:  Netfilter NAT
+
+Package: kmod-nf-reject6
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-nf-reject6
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 2612
+Filename: kmod-nf-reject6_5.4.164-1_arm_cortex-a7.ipk
+Size: 3356
+SHA256sum: e666b063827b1e31db23852628222f9d91da9e59db8777ffca8f3dbfa3365b5e
+Description:  Netfilter IPv6 reject support
+
+Package: kmod-nf-reject
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-nf-reject
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 2139
+Filename: kmod-nf-reject_5.4.164-1_arm_cortex-a7.ipk
+Size: 2911
+SHA256sum: 74161e3bf03e30200090d14c6036398849cce20e574542b8f47995731ff1a0ad
+Description:  Netfilter IPv4 reject support
+
+Package: kmod-nls-base
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-nls-base
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 3639
+Filename: kmod-nls-base_5.4.164-1_arm_cortex-a7.ipk
+Size: 4395
+SHA256sum: cf70887cd2dd86529669143266550d5443690565d15b7d830a6fcb2dee232517
+Description:  Kernel module for NLS (Native Language Support)
+
+Package: kmod-ppp
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-lib-crc-ccitt, kmod-slhc
+Source: package/kernel/linux
+SourceName: kmod-ppp
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 24911
+Filename: kmod-ppp_5.4.164-1_arm_cortex-a7.ipk
+Size: 25597
+SHA256sum: b16423312906be0b31793df05f005a3646d460566ae564bb4583bcf67875b62f
+Description:  Kernel modules for PPP support
+
+Package: kmod-pppoe
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ppp, kmod-pppox
+Source: package/kernel/linux
+SourceName: kmod-pppoe
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 7936
+Filename: kmod-pppoe_5.4.164-1_arm_cortex-a7.ipk
+Size: 8714
+SHA256sum: 4c8988d62317f33c572c21fc213ff70f4dd25edf185721f67c5bcf981bcd6afb
+Description:  Kernel module for PPPoE (PPP over Ethernet) support
+
+Package: kmod-pppox
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-ppp
+Source: package/kernel/linux
+SourceName: kmod-pppox
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 1896
+Filename: kmod-pppox_5.4.164-1_arm_cortex-a7.ipk
+Size: 2687
+SHA256sum: 1a786a2c307fde33ce1a78d49cf4956e23fb0028ab4d7b6ffcf2152302883825
+Description:  Kernel helper module for PPPoE and PPTP support
+
+Package: kmod-qca-nss-dp
+Version: 5.4.164+480f036cc96d4e5faa426cfcf90fa7e64dff87e8-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-qca-ssdk
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-nss-dp
+SourceName: kmod-qca-nss-dp
+Section: kernel
+SourceDateEpoch: 1652358693
+Architecture: arm_cortex-a7
+Installed-Size: 20971
+Filename: kmod-qca-nss-dp_5.4.164+480f036cc96d4e5faa426cfcf90fa7e64dff87e8-1_arm_cortex-a7.ipk
+Size: 21737
+SHA256sum: 76559b1b516c229cc45426a22a6da4452e0e50cba3a0c20f82332caee96d534d
+Description:  Kernel driver for NSS data plane
+
+Package: kmod-qca-nss-drv-bridge-mgr
+Version: 5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-qca-nss-drv-vlan-mgr, kmod-qca-nss-drv-vlan-mgr, kmod-bonding
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-nss-clients
+SourceName: kmod-qca-nss-drv-bridge-mgr
+Section: kernel
+SourceDateEpoch: 1652358712
+Architecture: arm_cortex-a7
+Installed-Size: 6440
+Filename: kmod-qca-nss-drv-bridge-mgr_5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2_arm_cortex-a7.ipk
+Size: 7297
+SHA256sum: f979978f30c068cdff4c9c55043549fc93f4977b870204b2ca962df8438dbb89
+Description:  Kernel driver for NSS bridge manager
+
+Package: kmod-qca-nss-drv-vlan-mgr
+Version: 5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-qca-nss-drv, kmod-bonding
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-nss-clients
+SourceName: kmod-qca-nss-drv-vlan-mgr
+Section: kernel
+SourceDateEpoch: 1652358712
+Architecture: arm_cortex-a7
+Installed-Size: 7325
+Filename: kmod-qca-nss-drv-vlan-mgr_5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2_arm_cortex-a7.ipk
+Size: 8173
+SHA256sum: a785c94e0f2a8ff17bfa129a7c3b0b8de817bb72abc8bc573aca95c603f3c7b2
+Description:  Kernel driver for NSS vlan manager
+
+Package: kmod-qca-nss-drv-wifi-meshmgr
+Version: 5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-qca-nss-drv
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-nss-clients
+SourceName: kmod-qca-nss-drv-wifi-meshmgr
+Section: kernel
+SourceDateEpoch: 1652358712
+Architecture: arm_cortex-a7
+Installed-Size: 10783
+Filename: kmod-qca-nss-drv-wifi-meshmgr_5.4.164+30742bb1decd5fe7b4e01be8081ab0a99c1f6888-2_arm_cortex-a7.ipk
+Size: 11596
+SHA256sum: 5476f186a36cda576cdb016f723ba4c9a22137d19447d756a332f2a4f087fbdd
+Description:  NSS WiFi-Mesh Manager for QCA NSS driver
+
+Package: kmod-qca-nss-drv
+Version: 5.4.164+7563fe37340ec4a28b7821a0ac17608ff30e2a85-2
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-qca-nss-dp
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-nss-drv
+SourceName: kmod-qca-nss-drv
+Section: kernel
+SourceDateEpoch: 1652766332
+Architecture: arm_cortex-a7
+Installed-Size: 193603
+Filename: kmod-qca-nss-drv_5.4.164+7563fe37340ec4a28b7821a0ac17608ff30e2a85-2_arm_cortex-a7.ipk
+Size: 191880
+SHA256sum: 450ff000bbd9f4852f89ce8ea96993f71a1c9694b545794c7109a9200c3480ee
+Description:  Kernel driver for NSS (core driver)
+
+Package: kmod-qca-ssdk
+Version: 5.4.164+0d6d410637648b1bea0dede48d3fab791689cfce-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Provides: qca-ssdk
+Source: /workdir/gl-infra-builder/wlan-ap/feeds/ipq807x/qca-ssdk
+SourceName: kmod-qca-ssdk
+Section: kernel
+SourceDateEpoch: 1652358621
+Architecture: arm_cortex-a7
+Installed-Size: 288401
+Filename: kmod-qca-ssdk_5.4.164+0d6d410637648b1bea0dede48d3fab791689cfce-1_arm_cortex-a7.ipk
+Size: 282653
+SHA256sum: 645e575fcec718dec5ca132c0a590a84587fe00492ab3e342e714625ef1b4dec
+Description:  Kernel driver for QCA SSDK
+
+Package: kmod-sched-cake
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-sched-core
+Source: package/kernel/linux
+SourceName: kmod-sched-cake
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 19213
+Filename: kmod-sched-cake_5.4.164-1_arm_cortex-a7.ipk
+Size: 20031
+SHA256sum: a32267d92a7914a593b8f9a28dc64fb8e3e359342c75ca6ee504a5ec0c323580
+Description:  Common Applications Kept Enhanced fq_codel/blue derived shaper
+
+Package: kmod-sched-core
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-sched-core
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 63769
+Filename: kmod-sched-core_5.4.164-1_arm_cortex-a7.ipk
+Size: 64543
+SHA256sum: d0e9d3ee84d03ad7ab599c31981669b62787d9ee240e5e2da676313743413584
+Description:  Core kernel scheduler support for IP traffic
+
+Package: kmod-slhc
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-lib-crc-ccitt
+Source: package/kernel/linux
+SourceName: kmod-slhc
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 3885
+Filename: kmod-slhc_5.4.164-1_arm_cortex-a7.ipk
+Size: 4622
+SHA256sum: 26267adbff23bf0559d006e71e518306fa19a4858b4559444e7faf51ad5a74c2
+Description:  Serial Line Header Compression
+
+Package: kmod-usb-configfs
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9)
+Source: package/kernel/linux
+SourceName: kmod-usb-configfs
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 105
+Filename: kmod-usb-configfs_5.4.164-1_arm_cortex-a7.ipk
+Size: 830
+SHA256sum: 360d8a2ecc6b27be0725d2f1b584da228abcbfd80decfe34816fc62208a4da01
+Description:  USB functions
+
+Package: kmod-usb-core
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-nls-base
+Source: package/kernel/linux
+SourceName: kmod-usb-core
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 103410
+Filename: kmod-usb-core_5.4.164-1_arm_cortex-a7.ipk
+Size: 103691
+SHA256sum: 01a45f5a22b3c270cf58faabf6de5eb26fb693c199c18ca248b58033712060e5
+Description:  Kernel support for USB
+
+Package: kmod-usb-dwc3-internal
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-gadget, kmod-usb-core
+Source: package/kernel/linux
+SourceName: kmod-usb-dwc3-internal
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 35680
+Filename: kmod-usb-dwc3-internal_5.4.164-1_arm_cortex-a7.ipk
+Size: 35908
+SHA256sum: 2ba21c5f3959114a874ab3f644fbb93cf1a85b8b833be2980dfd04888a7f91db
+Description:  This driver provides support for the Dual Role SuperSpeed
+ USB Controller based on the Synopsys DesignWare USB3 IP Core
+
+Package: kmod-usb-dwc3-qcom-internal
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-dwc3-internal
+Source: package/kernel/linux
+SourceName: kmod-usb-dwc3-qcom-internal
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 5680
+Filename: kmod-usb-dwc3-qcom-internal_5.4.164-1_arm_cortex-a7.ipk
+Size: 6524
+SHA256sum: 8f893dd09ba97ab50ad9b8f513ae7dc921121cb235fe5a2b6294b81ceabd797b
+Description:  Some QTI SoCs use DesignWare Core IP for USB2/3 functionality.
+ This driver also handles Qscratch wrapper which is needed for
+ peripheral mode support.
+
+Package: kmod-usb-f-diag
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-lib-composite, kmod-usb-configfs
+Source: package/kernel/linux
+SourceName: kmod-usb-f-diag
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 6533
+Filename: kmod-usb-f-diag_5.4.164-1_arm_cortex-a7.ipk
+Size: 7317
+SHA256sum: e0721e1b041e02506e6d2319ca374242c19ce8b264cdd40a3867c02815c9630f
+Description:  USB DIAG
+
+Package: kmod-usb-gadget
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-core
+Source: package/kernel/linux
+SourceName: kmod-usb-gadget
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 7762
+Filename: kmod-usb-gadget_5.4.164-1_arm_cortex-a7.ipk
+Size: 8528
+SHA256sum: f36422fd0ce45e4d1669484ab1de5f1712183e32259c8d429518acc8aa319367
+Description:  Kernel support for USB Gadget mode
+
+Package: kmod-usb-lib-composite
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-gadget, kmod-fs-configfs, kmod-usb-core
+Source: package/kernel/linux
+SourceName: kmod-usb-lib-composite
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 21553
+Filename: kmod-usb-lib-composite_5.4.164-1_arm_cortex-a7.ipk
+Size: 22245
+SHA256sum: 158c920ec164d232599437374c6b4cdc6bb52736efb2444d713f76b73451a394
+Description:  Lib Composite
+
+Package: kmod-usb-phy-ipq807x
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-core
+Source: package/kernel/linux
+SourceName: kmod-usb-phy-ipq807x
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 4780
+Filename: kmod-usb-phy-ipq807x_5.4.164-1_arm_cortex-a7.ipk
+Size: 5581
+SHA256sum: ef6ef9cf241c39f5f4e3cbdd3c41b6c78721e0a90b72982629a65b236fd14d1b
+Description:  This driver provides support for the USB PHY drivers
+ within the IPQ807x SoCs.
+
+Package: kmod-usb3
+Version: 5.4.164-1
+Depends: kernel (=5.4.164-1-25a4719ef3ac10cd1733780cff793aa9), kmod-usb-core
+Source: package/kernel/linux
+SourceName: kmod-usb3
+License: GPL-2.0
+Section: kernel
+SourceDateEpoch: 1661235897
+Architecture: arm_cortex-a7
+Installed-Size: 81104
+Filename: kmod-usb3_5.4.164-1_arm_cortex-a7.ipk
+Size: 81431
+SHA256sum: 2c5372afd3e4d752c6282294dbe30b1f7ba1be3fb0c431e934b765c4be8c060f
+Description:  Kernel support for USB3 (XHCI) controllers
+
+Package: libgcc1
+Version: 7.5.0-3
+Provides: libgcc
+Source: package/libs/toolchain
+SourceName: libgcc
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1608660710
+ABIVersion: 1
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 23094
+Filename: libgcc1_7.5.0-3_arm_cortex-a7.ipk
+Size: 23821
+SHA256sum: 705882077a2ece417d51701b605c3af40c79447aaef1329221510de57ec605af
+Description:  GCC support library
+
+Package: libip4tc2
+Version: 1.8.7-1
+Depends: libc, libxtables12
+Provides: libip4tc
+Source: package/network/utils/iptables
+SourceName: libip4tc
+License: GPL-2.0
+Section: libs
+SourceDateEpoch: 1613474876
+ABIVersion: 2
+CPE-ID: cpe:/a:netfilter_core_team:iptables
+Architecture: arm_cortex-a7
+Installed-Size: 19454
+Filename: libip4tc2_1.8.7-1_arm_cortex-a7.ipk
+Size: 20222
+SHA256sum: a939c1a7e6be0f38f497da1ad3c78b513c54f6dc53108180640d66e112ed53ed
+Description:  IPv4 firewall - shared libiptc library
+
+Package: libip6tc2
+Version: 1.8.7-1
+Depends: libc, libxtables12
+Provides: libip6tc
+Source: package/network/utils/iptables
+SourceName: libip6tc
+License: GPL-2.0
+Section: libs
+SourceDateEpoch: 1613474876
+ABIVersion: 2
+CPE-ID: cpe:/a:netfilter_core_team:iptables
+Architecture: arm_cortex-a7
+Installed-Size: 19107
+Filename: libip6tc2_1.8.7-1_arm_cortex-a7.ipk
+Size: 19905
+SHA256sum: 8265ecc49c23e964a84e1ef91c92759d9a9b5e96e82ad483b06f1375557c94bf
+Description:  IPv6 firewall - shared libiptc library
+
+Package: libiwinfo-data
+Version: 2021-06-09-c0414642-2.1
+Depends: libc
+Source: package/network/utils/iwinfo
+SourceName: libiwinfo-data
+License: GPL-2.0
+Section: opt
+SourceDateEpoch: 1661235892
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a7
+Installed-Size: 2078
+Filename: libiwinfo-data_2021-06-09-c0414642-2.1_arm_cortex-a7.ipk
+Size: 2853
+SHA256sum: 487969806b5da97dc27dd9a58dd3cd60ea4936c6b75812f6103121363656cb2f
+Description:  libiwinfo Lua binding
+
+Package: libiwinfo-lua
+Version: 2021-06-09-c0414642-2.1
+Depends: libc, libiwinfo20210430, liblua5.1.5
+Source: package/network/utils/iwinfo
+SourceName: libiwinfo-lua
+License: GPL-2.0
+Section: lang
+SourceDateEpoch: 1661235892
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a7
+Installed-Size: 6893
+Filename: libiwinfo-lua_2021-06-09-c0414642-2.1_arm_cortex-a7.ipk
+Size: 7669
+SHA256sum: 90b5fc765afa4d30ce2fad9920927268ff3da5aa93ad04b5ff919dee683f9b4b
+Description:  This is the Lua binding for the iwinfo library. It provides access to all enabled
+ backends.
+
+Package: libiwinfo20210430
+Version: 2021-06-09-c0414642-2.1
+Depends: libc, libnl-tiny2022-05-17, libuci20130104, libubus20210809, libiwinfo-data
+Provides: libiwinfo
+Source: package/network/utils/iwinfo
+SourceName: libiwinfo
+License: GPL-2.0
+Section: libs
+SourceDateEpoch: 1661235892
+ABIVersion: 20210430
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a7
+Installed-Size: 25594
+Filename: libiwinfo20210430_2021-06-09-c0414642-2.1_arm_cortex-a7.ipk
+Size: 26403
+SHA256sum: d8494a51eabb13a2ac5ae3b69774563ef96d691f2356317c1e7e4d7a5fce54b0
+Description:  Wireless information library with simplified API for nl80211
+ and wext driver interfaces.
+
+Package: libpthread
+Version: 1.1.24-3
+Depends: libgcc1
+Source: package/libs/toolchain
+SourceName: libpthread
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1608660710
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 123
+Filename: libpthread_1.1.24-3_arm_cortex-a7.ipk
+Size: 891
+SHA256sum: 7b4543eb6c592cad2dd2b549da1ed32c700fb6946ac6c0db7afc96b153be1f4b
+Description:  POSIX thread library
+
+Package: librt
+Version: 1.1.24-3
+Depends: libpthread
+Source: package/libs/toolchain
+SourceName: librt
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1608660710
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7
+Installed-Size: 123
+Filename: librt_1.1.24-3_arm_cortex-a7.ipk
+Size: 901
+SHA256sum: 66ec9c706289dc66881e2a7c5b17774ea57147bc144daff9312f97507b027ea4
+Description:  POSIX.1b RealTime extension library
+
+Package: libxtables12
+Version: 1.8.7-1
+Depends: libc
+Provides: libxtables
+Source: package/network/utils/iptables
+SourceName: libxtables
+License: GPL-2.0
+Section: libs
+SourceDateEpoch: 1613474876
+ABIVersion: 12
+CPE-ID: cpe:/a:netfilter_core_team:iptables
+Architecture: arm_cortex-a7
+Installed-Size: 43706
+Filename: libxtables12_1.8.7-1_arm_cortex-a7.ipk
+Size: 44463
+SHA256sum: 72611d668e8ff58b537cf2e987c40ecda6fda92fe1ab0f5803a3082cf1881cc9
+Description:  IPv4/IPv6 firewall - shared xtables library
+
+Package: mtd
+Version: 26
+Depends: libc, libubox20220515
+Source: package/system/mtd
+SourceName: mtd
+License: GPL-2.0+
+Section: utils
+SourceDateEpoch: 1598818715
+Architecture: arm_cortex-a7
+Installed-Size: 9799
+Filename: mtd_26_arm_cortex-a7.ipk
+Size: 10514
+SHA256sum: 5b897c728706ab270d78e1815a5e0e2069f0e7f79ad3ac31ed98952092195163
+Description:  This package contains an utility useful to upgrade from other firmware or 
+ older OpenWrt releases.
+
+Package: ubi-utils
+Version: 2.1.2-1
+Depends: libc
+Source: package/utils/mtd-utils
+SourceName: ubi-utils
+License: GPLv2
+Section: utils
+SourceDateEpoch: 1661235892
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: arm_cortex-a7
+Installed-Size: 76871
+Filename: ubi-utils_2.1.2-1_arm_cortex-a7.ipk
+Size: 77463
+SHA256sum: 33be5f4ab802481ea86621601deef0d1d80c7e2308b16ad83cb6fab5c1d7d691
+Description:  Utilities for manipulating memory technology devices.
+
+Package: uboot-envtools
+Version: 2021.01-20
+Depends: libc
+Source: package/boot/uboot-envtools
+SourceName: uboot-envtools
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Section: utils
+SourceDateEpoch: 1661235895
+Architecture: arm_cortex-a7
+Installed-Size: 13420
+Filename: uboot-envtools_2021.01-20_arm_cortex-a7.ipk
+Size: 14124
+SHA256sum: 35caf223951c0607b59f54c172777a58ae5fc5c7a4d4607c1fb230a088d235e4
+Description:  This package includes tools to read and modify U-Boot bootloader environment.
+
