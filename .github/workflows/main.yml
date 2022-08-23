@@ -105,7 +105,7 @@ jobs:
         REPO: self
         BRANCH: ipk
         FOLDER: /home/runner/work/GL-iNet_AXT1800-Package/GL-iNet_AXT1800-Package/gl-infra-builder/wlan-ap/openwrt/ipk
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_TRIGGER_PAT }}
 
     - name: Upload ipk directory
       uses: actions/upload-artifact@main
