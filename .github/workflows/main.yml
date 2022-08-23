@@ -21,11 +21,10 @@ env:
   GIT_USER: Road-tech
   GIT_EMAIL: 496814664@qq.com
   DIY_P1_SH: add-feeds.sh
-  UPLOAD_BIN_DIR: true
-  UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: false
+  UPLOAD_IPK_DIR: true
+  UPLOAD_COWTRANSFER: true
+  UPLOAD_WETRANSFER: true
+  UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
 jobs:
@@ -74,8 +73,8 @@ jobs:
       id: package
       run: |
         cd gl-infra-builder/wlan-ap/openwrt
-        ./scripts/gen_config.py target_wlan_ap-gl-axt1800-5-4 luci Road
-
+        ./scripts/gen_config.py target_wlan_ap-gl-axt1800-5-4 luci
+        
     - name: Compile the firmware/编译
       id: compile
       run: |
@@ -88,12 +87,7 @@ jobs:
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
         mkdir ipk
         mv bin/targets/ipq807x/ipq60xx/packages ipk
-        
-    - name: 生成软件包索引
-      id: generateipk
-      run: |
-        git clone https://github.com/luochongjun/opkg-make-repo.git
-        cd opkg-make-repo && ./make-index /home/runner/work/GL-iNet_AXT1800-Package/GL-iNet_AXT1800-Package/gl-infra-builder/wlan-ap/openwrt/ipk
+        cd ipk && echo "FIRMWARE=$PWD" >> $GITHUB_ENV
 
     - name: Check space usage
       if: (!cancelled())
@@ -105,29 +99,14 @@ jobs:
         REPO: self
         BRANCH: ipk
         FOLDER: /home/runner/work/GL-iNet_AXT1800-Package/GL-iNet_AXT1800-Package/gl-infra-builder/wlan-ap/openwrt/ipk
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_TRIGGER_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload ipk directory
       uses: actions/upload-artifact@main
-      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_IPK_DIR == 'true'
       with:
-        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_IPK_${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: gl-infra-builder/wlan-ap/openwrt/ipk
-
-    - name: Organize files
-      id: organize
-      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
-      run: |
-        cd gl-infra-builder/wlan-ap/openwrt/ipk
-        echo "FIRMWAREIPK=$PWD" >> $GITHUB_ENV
-        echo "::set-output name=status::success"
-
-    - name: Upload ipk directory
-      uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWAREIPK }}
 
     - name: Upload firmware to cowtransfer
       id: cowtransfer
